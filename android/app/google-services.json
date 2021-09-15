@@ -1,0 +1,69 @@
+{
+  "project_info": {
+    "project_number": "125087498724",
+    "firebase_url": "https://testfcm-5924f.firebaseio.com",
+    "project_id": "testfcm-5924f",
+    "storage_bucket": "testfcm-5924f.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:125087498724:android:bf745a39bf589f870c87f1",
+        "android_client_info": {
+          "package_name": "com.example.local_noti_test"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "125087498724-ig0lovs6p57009sds9caogahtc2qttl5.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAop1ICzDAUD9XPGy67y-IBwxV75MXdsj0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "125087498724-ig0lovs6p57009sds9caogahtc2qttl5.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:125087498724:android:c4efc662979120080c87f1",
+        "android_client_info": {
+          "package_name": "com.signaturependudriver.flutter_google_map_coord"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "125087498724-ig0lovs6p57009sds9caogahtc2qttl5.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAop1ICzDAUD9XPGy67y-IBwxV75MXdsj0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "125087498724-ig0lovs6p57009sds9caogahtc2qttl5.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
