@@ -148,77 +148,75 @@ class MobileCard extends StatelessWidget {
     return InkWell(
       onTap: onTap,
       child: Container(
+        margin: const EdgeInsets.symmetric(horizontal: 5, vertical: 10),
         padding: const EdgeInsets.symmetric(horizontal: 15, vertical: 15),
         decoration: BoxDecoration(
           color: const Color(0xff6D8299),
           borderRadius: BorderRadius.circular(20),
         ),
-        child: Container(
-          margin: const EdgeInsets.symmetric(horizontal: 5, vertical: 10),
-          child: Column(
-            children: [
-              Row(
-                children: [
-                  const Text(
-                    "DeviceId : ",
-                    style: TextStyle(
-                      fontWeight: FontWeight.bold,
-                    ),
+        child: Column(
+          children: [
+            Row(
+              children: [
+                const Text(
+                  "DeviceId : ",
+                  style: TextStyle(
+                    fontWeight: FontWeight.bold,
                   ),
-                  Expanded(
-                      child: Text(
-                    model.deviceId ?? "",
-                    style: const TextStyle(
-                      fontWeight: FontWeight.w600,
-                    ),
-                  )),
-                ],
-              ),
-              const SizedBox(
-                height: 10,
-              ),
-              Row(
-                children: [
-                  const Text(
-                    "Device Model : ",
-                    style: TextStyle(
-                      fontWeight: FontWeight.bold,
-                    ),
-                  ),
-                  Expanded(
-                      child: Text(
-                    model.deviceModel ?? "",
-                    style: const TextStyle(
-                      fontWeight: FontWeight.w600,
-                    ),
-                  )),
-                ],
-              ),
-              const SizedBox(
-                height: 10,
-              ),
-              Row(
-                children: [
-                  const Text(
-                    "DeviceId : ",
-                    style: TextStyle(
-                      fontWeight: FontWeight.bold,
-                    ),
-                  ),
-                  Expanded(
+                ),
+                Expanded(
                     child: Text(
-                      model.fcmToken ?? "",
-                      maxLines: 1,
-                      overflow: TextOverflow.ellipsis,
-                      style: const TextStyle(
-                        fontWeight: FontWeight.w400,
-                      ),
+                  model.deviceId ?? "",
+                  style: const TextStyle(
+                    fontWeight: FontWeight.w600,
+                  ),
+                )),
+              ],
+            ),
+            const SizedBox(
+              height: 10,
+            ),
+            Row(
+              children: [
+                const Text(
+                  "Device Model : ",
+                  style: TextStyle(
+                    fontWeight: FontWeight.bold,
+                  ),
+                ),
+                Expanded(
+                    child: Text(
+                  model.deviceModel ?? "",
+                  style: const TextStyle(
+                    fontWeight: FontWeight.w600,
+                  ),
+                )),
+              ],
+            ),
+            const SizedBox(
+              height: 10,
+            ),
+            Row(
+              children: [
+                const Text(
+                  "DeviceId : ",
+                  style: TextStyle(
+                    fontWeight: FontWeight.bold,
+                  ),
+                ),
+                Expanded(
+                  child: Text(
+                    model.fcmToken ?? "",
+                    maxLines: 1,
+                    overflow: TextOverflow.ellipsis,
+                    style: const TextStyle(
+                      fontWeight: FontWeight.w400,
                     ),
                   ),
-                ],
-              ),
-            ],
-          ),
+                ),
+              ],
+            ),
+          ],
         ),
       ),
     );
@@ -248,19 +246,19 @@ class FcmResponseModel {
     if (json['results'] != null) {
       results = <Results>[];
       json['results'].forEach((v) {
-        results.add(new Results.fromJson(v));
+        results.add( Results.fromJson(v));
       });
     }
   }
 
   Map<String, dynamic> toJson() {
-    final Map<String, dynamic> data = new Map<String, dynamic>();
-    data['multicast_id'] = this.multicastId;
-    data['success'] = this.success;
-    data['failure'] = this.failure;
-    data['canonical_ids'] = this.canonicalIds;
-    if (this.results != null) {
-      data['results'] = this.results.map((v) => v.toJson()).toList();
+    final Map<String, dynamic> data =  <String, dynamic>{};
+    data['multicast_id'] = multicastId;
+    data['success'] = success;
+    data['failure'] = failure;
+    data['canonical_ids'] = canonicalIds;
+    if (results != null) {
+      data['results'] = results.map((v) => v.toJson()).toList();
     }
     return data;
   }
@@ -277,7 +275,7 @@ class Results {
 
   Map<String, dynamic> toJson() {
     final Map<String, dynamic> data = new Map<String, dynamic>();
-    data['message_id'] = this.messageId;
+    data['message_id'] = messageId;
     return data;
   }
 }
